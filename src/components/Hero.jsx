@@ -12,13 +12,17 @@ const styles = {
     textAlign: 'center', position: 'relative', zIndex: 1,
     maxWidth: 800, padding: '0 24px'
   },
-  avatar: {
-    width: 140, height: 140, borderRadius: '50%',
-    background: 'var(--gradient)', display: 'flex',
-    alignItems: 'center', justifyContent: 'center',
-    margin: '0 auto 32px', fontSize: 48, fontWeight: 800,
-    color: '#fff', boxShadow: '0 0 40px rgba(99,102,241,.3)',
+  avatarWrapper: {
+    position: 'relative', width: 160, height: 160,
+    margin: '0 auto 32px', borderRadius: '50%',
+    padding: 4, background: 'var(--gradient)',
+    boxShadow: '0 0 50px rgba(99,102,241,.35)',
     animation: 'float 3s ease-in-out infinite'
+  },
+  avatar: {
+    width: '100%', height: '100%', borderRadius: '50%',
+    objectFit: 'cover', display: 'block',
+    border: '3px solid #0a0a1a'
   },
   name: {
     fontSize: 'clamp(36px, 6vw, 64px)', fontWeight: 800,
@@ -50,7 +54,9 @@ export default function Hero() {
     <section id="hero" style={styles.section}>
       <div style={styles.bg} />
       <div style={styles.content}>
-        <div style={styles.avatar}>AA</div>
+        <div style={styles.avatarWrapper}>
+          <img src="/profile.jpeg" alt="Ahmed Ali" style={styles.avatar} />
+        </div>
         <h1 style={styles.name}>
           Hi, I'm <span className="gradient-text">Ahmed Ali</span>
         </h1>
