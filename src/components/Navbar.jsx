@@ -46,7 +46,6 @@ const links = [
   { label: 'Home', href: '#hero' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Contact', href: '#contact' },
 ]
 
 export default function Navbar() {
@@ -75,11 +74,7 @@ export default function Navbar() {
                 >{l.label}</a>
               </li>
             ))}
-            <li>
-              <a href="#contact" className="btn btn-primary" style={{ padding: '8px 20px', fontSize: 13 }}>
-                Hire Me <i className="fas fa-arrow-right" />
-              </a>
-            </li>
+
           </ul>
           <button style={styles.mobileBtn} className="mobile-btn" onClick={() => setOpen(true)}>
             <i className="fas fa-bars" />
@@ -95,8 +90,7 @@ export default function Navbar() {
           <a key={l.href} href={l.href} style={styles.mobileLink}
             onClick={() => setOpen(false)}>{l.label}</a>
         ))}
-        <a href="#contact" className="btn btn-primary" style={{ marginTop: 24, width: '100%', justifyContent: 'center' }}
-          onClick={() => setOpen(false)}>Hire Me</a>
+
       </div>
       {open && <div onClick={() => setOpen(false)} style={{
         position: 'fixed', inset: 0, background: 'rgba(0,0,0,.5)', zIndex: 998

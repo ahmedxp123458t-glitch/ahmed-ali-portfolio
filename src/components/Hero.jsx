@@ -13,16 +13,18 @@ const styles = {
     maxWidth: 800, padding: '0 24px'
   },
   avatarWrapper: {
-    position: 'relative', width: 160, height: 160,
+    position: 'relative', width: 170, height: 170,
     margin: '0 auto 32px', borderRadius: '50%',
     padding: 4, background: 'var(--gradient)',
-    boxShadow: '0 0 50px rgba(99,102,241,.35)',
-    animation: 'float 3s ease-in-out infinite'
+    boxShadow: '0 0 60px rgba(99,102,241,.4)',
+    animation: 'float 3s ease-in-out infinite',
+    overflow: 'hidden'
   },
   avatar: {
     width: '100%', height: '100%', borderRadius: '50%',
-    objectFit: 'cover', display: 'block',
-    border: '3px solid #0a0a1a'
+    objectFit: 'cover', objectPosition: 'center 22%',
+    display: 'block', border: '3px solid #0a0a1a',
+    transform: 'scale(1.15)'
   },
   name: {
     fontSize: 'clamp(36px, 6vw, 64px)', fontWeight: 800,
@@ -72,9 +74,7 @@ export default function Hero() {
           <a href="#projects" className="btn btn-primary">
             View Projects <i className="fas fa-arrow-right" />
           </a>
-          <a href="#contact" className="btn btn-outline">
-            Contact Me <i className="fas fa-envelope" />
-          </a>
+
           <a href="https://github.com/ahmedxp123458t-glitch" target="_blank" rel="noopener" className="btn btn-outline">
             <i className="fab fa-github" /> GitHub
           </a>
