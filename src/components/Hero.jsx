@@ -13,18 +13,15 @@ const styles = {
     maxWidth: 800, padding: '0 24px'
   },
   avatarWrapper: {
-    position: 'relative', width: 170, height: 170,
+    position: 'relative', width: 180, height: 180,
     margin: '0 auto 32px', borderRadius: '50%',
-    padding: 4, background: 'var(--gradient)',
-    boxShadow: '0 0 60px rgba(99,102,241,.4)',
-    animation: 'float 3s ease-in-out infinite',
-    overflow: 'hidden'
+    padding: 5, background: 'var(--gradient)',
+    boxShadow: '0 0 60px rgba(99,102,241,.45)',
+    animation: 'float 3s ease-in-out infinite'
   },
   avatar: {
     width: '100%', height: '100%', borderRadius: '50%',
-    objectFit: 'cover', objectPosition: 'center 22%',
-    display: 'block', border: '3px solid #0a0a1a',
-    transform: 'scale(1.15)'
+    display: 'block', border: '3px solid #0a0a1a'
   },
   name: {
     fontSize: 'clamp(36px, 6vw, 64px)', fontWeight: 800,
